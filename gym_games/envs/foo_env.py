@@ -23,7 +23,7 @@ class FooEnv(gym.Env):
 
     def reset(self):
         self.count = 0
-        np.array([[0.]], dtype=np.float32)
+        return np.array([[0.]], dtype=np.float32)
 
     def render(self, mode="human"):
         print(self.count)
