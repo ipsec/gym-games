@@ -10,7 +10,9 @@ class FooEnv(gym.Env):
 
     def step(self, action):
         self.count += 1
-        done = False if self.count <= 10 else done = True
+        done = False
+        if self.count >= 10:
+            done = True
         reward = 1
 
         return np.array([[0]], dtype=np.float32), reward, done, {}
