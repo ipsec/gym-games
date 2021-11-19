@@ -1,5 +1,5 @@
 import gym
-from numpy import np
+import numpy as np
 
 
 class FooEnv(gym.Env):
