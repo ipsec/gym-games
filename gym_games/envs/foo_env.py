@@ -9,7 +9,7 @@ class FooEnv(gym.Env):
 
     def __init__(self):
         self.count = 0
-        self.observation_space = spaces.Box(low=-np.inf, high=np.inf, shape=(1,), dtype=np.float32)
+        self.observation_space = spaces.Box(low=-1, high=1, shape=(1,), dtype=np.float32)
         self.action_space = spaces.Box(low=0, high=20, shape=(1,), dtype=np.int64)
 
     def step(self, action):
