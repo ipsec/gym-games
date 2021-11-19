@@ -25,4 +25,4 @@ class FooEnv(gym.Env):
         np.array([[0]], dtype=np.float32)
 
     def render(self, mode="human"):
-        ...
+        print(self.count)
