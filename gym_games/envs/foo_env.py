@@ -1,12 +1,15 @@
 import gym
 import numpy as np
 
+from gym import spaces
 
 class FooEnv(gym.Env):
     metadata = {'render.modes': ['human']}
 
     def __init__(self):
         self.count = 0
+        self.observation_space = spaces.Box(low=-np.inf, high=np.inf, shape=(1,), dtype=np.int8)
+        self.action_space = spaces.Box(low=-np.inf, high=np.inf, shape=(1,), dtype=np.int8)
 
     def step(self, action):
         self.count += 1
